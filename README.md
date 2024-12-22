@@ -63,7 +63,7 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 
 2. **For Inference**: 
 - Install the requirements from [`RequirementsTesting.txt`](RequirementsTesting.txt) .
-- Take request of access of model from [Drive Link](https://drive.google.com/file/d/1-H4WKMDVFD_YX86_i-nMBUARM9ytXrPv/view?usp=sharing).
+- Request to access the model along with reason from [Drive Link](https://drive.google.com/file/d/1-H4WKMDVFD_YX86_i-nMBUARM9ytXrPv/view?usp=sharing).
 - Copy the script [`LungSegmentationInference.ipynb`](LungSegmentationInference.ipynb) and move the `model_final.pth` to appropriate place.
 
 ## Metrics
