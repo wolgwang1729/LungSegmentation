@@ -94,8 +94,7 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 |:------:|:------:|:------:|:-----:|:------:|:------:|
 | 67.212 | 79.115 | 71.891 | 2.268 | 39.388 | 90.062 |
 
-where 
-where 
+where
 - **AP**: Average Precision - This is the average of the precision values at different recall levels. It provides a single metric to summarize the precision-recall curve.
 - **AP50**: AP at IoU=0.50 - This is the average precision when the Intersection over Union (IoU) threshold is 0.50. It measures how well the predicted bounding boxes overlap with the ground truth boxes at this threshold.
 - **AP75**: AP at IoU=0.75 - This is the average precision when the Intersection over Union (IoU) threshold is 0.75. It is a stricter measure compared to AP50, requiring higher overlap between predicted and ground truth boxes.
