@@ -57,17 +57,17 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 ## Usage
 
 1. **For Training**: 
-- Install the requirements from [`RequirementsTraining.txt`](Training\RequirementsTraining.txt) .
-- Copy the script [`LungSegmentationTraining2500iters.ipynb`](Training\V1\LungSegmentationTraining2500iters.ipynb) and change the appropriate fields according to your environment like Annotations path, Images path.
+- Install the requirements from [`RequirementsTraining.txt`](Training/RequirementsTraining.txt).
+- Copy the script [`LungSegmentationTraining2500iters.ipynb`](Training/V1/LungSegmentationTraining2500iters.ipynb) and change the appropriate fields according to your environment like Annotations path, Images path.
 
 2. **For Inference**: 
-- Install the requirements from [`RequirementsInference.txt`](Inference\RequirementsInference.txt) .
+- Install the requirements from [`RequirementsInference.txt`](Inference/RequirementsInference.txt).
 - Request to access the model along with reason from [Drive Link](https://drive.google.com/file/d/1-H4WKMDVFD_YX86_i-nMBUARM9ytXrPv/view?usp=sharing).
-- Copy the script [`LungSegmentationInference.ipynb`](Inference\LungSegmentationInference.ipynb) and move the `model_final.pth` to appropriate place.
+- Copy the script [`LungSegmentationInference.ipynb`](Inference/LungSegmentationInference.ipynb) and move the `model_final.pth` to appropriate place.
 
 ## Metrics
 
-The best results were obtained from [`V2`](Training\V2) model and they are as follows:
+The best results were obtained from [`V2`](Training/V2) model and they are as follows:
 
 - On Validation Set:
 
