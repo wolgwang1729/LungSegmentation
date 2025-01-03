@@ -48,51 +48,52 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 
 ## Notebooks
 
-- **[`PreProcessing/mhdToJPG.ipynb`](PreProcessing/mhdToJPG.ipynb)**: Script to extract CT images from `.mhd` files and save them as `.jpg`.
-- **[`PreProcessing/MaskToAnnotations.ipynb`](PreProcessing/MaskToAnnotations.ipynb)**: Script to convert masks to COCO format annotations.
+- **[`mhdToJPG.ipynb`](PreProcessing/mhdToJPG.ipynb)**: Script to extract CT images from `.mhd` files and save them as `.jpg`.
+- **[`MaskToAnnotations.ipynb`](PreProcessing/MaskToAnnotations.ipynb)**: Script to convert masks to COCO format annotations.
 - **[`Training`](Training)**: Folder containing various notebooks for fine-tuning the pre-trained model on the VESSEL12 dataset.
-- **[`Inference/LungSegmentationInference.ipynb`](Inference/LungSegmentationInference.ipynb)**: Notebook for running inference on LIDC-IDRI Image or any other Lung CT Scan.
+- **[`LungSegmentationInference.ipynb`](Inference/LungSegmentationInference.ipynb)**: Notebook for running inference on LIDC-IDRI Image or any other Lung CT Scan.
 
 
 ## Usage
 
 1. **For Training**: 
-- Install the requirements from [`RequirementsTraining.txt`](RequirementsTraining.txt) .
-- Copy the script [`LungSegmentationTraining2500iters.ipynb`](LungSegmentationTraining2500iters.ipynb) and change the appropriate fields according to your environment like Annotations path, Images path.
+- Install the requirements from [`RequirementsTraining.txt`](Training\RequirementsTraining.txt) .
+- Copy the script [`LungSegmentationTraining2500iters.ipynb`](Training\V1\LungSegmentationTraining2500iters.ipynb) and change the appropriate fields according to your environment like Annotations path, Images path.
 
 2. **For Inference**: 
-- Install the requirements from [`RequirementsTesting.txt`](RequirementsTesting.txt) .
+- Install the requirements from [`RequirementsInference.txt`](Inference\RequirementsInference.txt) .
 - Request to access the model along with reason from [Drive Link](https://drive.google.com/file/d/1-H4WKMDVFD_YX86_i-nMBUARM9ytXrPv/view?usp=sharing).
-- Copy the script [`LungSegmentationInference.ipynb`](LungSegmentationInference.ipynb) and move the `model_final.pth` to appropriate place.
+- Copy the script [`LungSegmentationInference.ipynb`](Inference\LungSegmentationInference.ipynb) and move the `model_final.pth` to appropriate place.
 
 ## Metrics
-### After 1500 iterations:
+
+The best results were obtained from [`V2`](Training\V2) model and they are as follows:
+
 - On Validation Set:
 
-|   AP   |  AP50  |  AP75  |  APs  |  APm   |  APl   |
-|:------:|:------:|:------:|:-----:|:------:|:------:|
-| 63.752 | 77.880 | 69.507 | 1.684 | 47.518 | 87.681 |
+#### BBOX:
+| AP     | AP50   | AP75   | APs    | APm    | APl    |
+|--------|--------|--------|--------|--------|--------|
+| 70.0634| 75.5068| 70.6728| 3.3102 | 64.6166| 96.4978|
+
+#### SEGM:
+| AP     | AP50   | AP75   | APs    | APm    | APl    |
+|--------|--------|--------|--------|--------|--------|
+| 63.8189| 76.1569| 69.7305| 1.8703 | 54.2696| 88.9731|
 
 
 - On Test Set:
 
-|   AP   |  AP50  |  AP75  |  APs  |  APm   |  APl   |
-|:------:|:------:|:------:|:-----:|:------:|:------:|
-| 67.513 | 77.104 | 71.320 | 1.717 | 36.812 | 91.222 |
+#### BBOX:
+| AP     | AP50   | AP75   | APs    | APm    | APl    |
+|--------|--------|--------|--------|--------|--------|
+| 76.4125| 78.2115| 78.2115| 4.8238 | 83.2426| 98.3491|
 
-### After 2500 iterations:
-- On Validation Set:
+#### SEGM:
+| AP     | AP50   | AP75   | APs    | APm    | APl    |
+|--------|--------|--------|--------|--------|--------|
+| 68.6355| 78.2038| 71.7430| 3.1889 | 45.3803| 92.6251|
 
-|   AP   |  AP50  |  AP75  |  APs  |  APm   |  APl   |
-|:------:|:------:|:------:|:-----:|:------:|:------:|
-| 64.421 | 77.521 | 69.677 | 1.641 | 51.233 | 88.494 |
-
-
-- On Test Set:
-
-|   AP   |  AP50  |  AP75  |  APs  |  APm   |  APl   |
-|:------:|:------:|:------:|:-----:|:------:|:------:|
-| 67.212 | 79.115 | 71.891 | 2.268 | 39.388 | 90.062 |
 
 where
 - **AP**: Average Precision - This is the average of the precision values at different recall levels. It provides a single metric to summarize the precision-recall curve.
