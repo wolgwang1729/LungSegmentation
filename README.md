@@ -20,11 +20,11 @@ So one can download the dataset from Kaggle:
 
 ### 1. Extracting CT Images as JPG
 
-The first step involved creating a script to extract CT images from the `.mhd` files and save them as `.jpg` files. This was done using the `mhdToJPG.ipynb` notebook.
+The first step involved creating a script to extract CT images from the `.mhd` files and save them as `.jpg` files. This was done using the [`PreProcessing/mhdToJPG.ipynb`](PreProcessing/mhdToJPG.ipynb) notebook.
 
 ### 2. Converting Masks to COCO Format Annotations
 
-Next, a script was created to convert the masks into COCO format annotations compatible with Detectron2. This was achieved using the `MaskToAnnotations.ipynb` notebook. The segmentation in the JSON file uses the RLE (Run-Length Encoding) format, which is a list in column-major form until the next complement pixel is found.
+Next, a script was created to convert the masks into COCO format annotations compatible with Detectron2. This was achieved using the  [`PreProcessing/MaskToAnnotations.ipynb`](PreProcessing/MaskToAnnotations.ipynb) notebook. The segmentation in the JSON file uses the RLE (Run-Length Encoding) format, which is a list in column-major form until the next complement pixel is found.
 
 Example :
 ![RLE Annotation Example][1]
@@ -34,11 +34,11 @@ Example :
 
 ### 3. Fine-Tuning a Pre-Trained Model
 
-A pre-trained model, `COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x`, was used and fine-tuned on the VESSEL12 dataset. This was done using the `LungSegmentationTraining2500iters.ipynb` notebook.
+A pre-trained model was used and fine-tuned on the VESSEL12 dataset. All the training notebooks are in [`Training Folder`](Training)
 
 ### 4. Running Inference
 
-Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to obtain segmentation results. This is done using the `LungSegmentationInference.ipynb` notebook.
+Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to obtain segmentation results. This is done using the [`Inference/LungSegmentationInference.ipynb`](Inference/LungSegmentationInference.ipynb) notebook.
 
  ![Inference on LIDC-IDRI Image][2]
 
@@ -48,11 +48,10 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 
 ## Notebooks
 
-- **[`mhdToJPG.ipynb`](mhdToJPG.ipynb)**: Script to extract CT images from `.mhd` files and save them as `.jpg`.
-- **[`MaskToAnnotations.ipynb`](MaskToAnnotations.ipynb)**: Script to convert masks to COCO format annotations.
-- **[`LungSegmentationTraining1500iters.ipynb`](LungSegmentationTraining1500iters.ipynb)**: Notebook for fine-tuning the pre-trained model on the VESSEL12 dataset for 1500 iterations.
-- **[`LungSegmentationTraining2500iters.ipynb`](LungSegmentationTraining2500iters.ipynb)**: Notebook for fine-tuning the pre-trained model on the VESSEL12 dataset for 2500 iterations.
-- **[`LungSegmentationInference.ipynb`](LungSegmentationInference.ipynb)**: Notebook for running inference on LIDC-IDRI Image or any other Lung CT Scan.
+- **[`PreProcessing/mhdToJPG.ipynb`](PreProcessing/mhdToJPG.ipynb)**: Script to extract CT images from `.mhd` files and save them as `.jpg`.
+- **[`PreProcessing/MaskToAnnotations.ipynb`](PreProcessing/MaskToAnnotations.ipynb)**: Script to convert masks to COCO format annotations.
+- **[`Training`](Training)**: Folder containing various notebooks for fine-tuning the pre-trained model on the VESSEL12 dataset.
+- **[`Inference/LungSegmentationInference.ipynb`](Inference/LungSegmentationInference.ipynb)**: Notebook for running inference on LIDC-IDRI Image or any other Lung CT Scan.
 
 
 ## Usage
@@ -104,7 +103,7 @@ where
 - **APm**: AP for medium objects - This is the average precision for objects that are medium in size. It helps to evaluate the model's performance on detecting medium-sized objects.
 - **APl**: AP for large objects - This is the average precision for objects that are large in size. It helps to evaluate the model's performance on detecting large objects.
 
-Detailed metrics throughout the training can be found in the [`metrics.json`](metrics.json) file.
+Detailed metrics throughout the training can be found in the readme of respective Training folder as `metrics.json`
 
 ## Conclusion
 
