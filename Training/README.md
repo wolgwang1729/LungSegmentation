@@ -17,6 +17,12 @@
 
 ## Changes from V4 to V5
 
-- **Pre Trained Model**:  Nask R-CNN ResNeXt-101 (32x8d) FPN
+- **Pre Trained Model**:  Mask R-CNN ResNeXt-101 (32x8d) FPN
 - **Optimizer**: Changed to `Adam`.
 - **Base Learning Rate**: Set to `0.0001`.
+
+## Changes from V5 to V6
+
+- **Pre Trained Model**: Mask R-CNN ResNet-101 FPN
+- **Image Batch Size**: Set to 32
+
