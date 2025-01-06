@@ -8,9 +8,15 @@
 ## Changes from V2 to V3
 
 - **Optimizer**: Changed from `SGD with Momentum` to `Adam`.
-- **Learning Rate**: Set to `0.0001`from `0.0025`
+- **Base Learning Rate**: Set to `0.0001`from `0.0025`
 
 ## Changes from V3 to V4
 
 - **Optimizer**: Changed from `Adam` to `AdamW`.
-- **Learning Rate**: Set to `0.0001`.
+- **Base Learning Rate**: Set to `0.0001`.
+
+## Changes from V4 to V5
+
+- **Pre Trained Model**:  Nask R-CNN ResNeXt-101 (32x8d) FPN
+- **Optimizer**: Changed to `Adam`.
+- **Base Learning Rate**: Set to `0.0001`.
