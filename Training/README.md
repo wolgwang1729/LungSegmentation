@@ -26,3 +26,7 @@
 - **Pre Trained Model**: Mask R-CNN ResNet-101 FPN
 - **Image Batch Size**: Set to 32
 
+## Changes from V6 to V7
+
+- **Image Batch Size**: Set to 64
+
