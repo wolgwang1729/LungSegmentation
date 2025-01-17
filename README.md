@@ -62,24 +62,24 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 
 2. **For Inference**: 
 - Install the requirements from [`RequirementsInference.txt`](Inference/RequirementsInference.txt).
-- Request to access the model along with reason from [Drive Link](https://drive.google.com/file/d/1-H4WKMDVFD_YX86_i-nMBUARM9ytXrPv/view?usp=sharing).
+- Request to access the model along with reason from [Drive Link](https://drive.google.com/file/d/1-9ioLFORD_EA_ZvaG3IHkrMF1vIYkXAz/view?usp=drive_link).
 - Copy the script [`LungSegmentationInference.ipynb`](Inference/LungSegmentationInference.ipynb) and move the `model_final.pth` to appropriate place.
 
 ## Metrics
 
-The best results were obtained from [`V2`](Training/V2) model and they are as follows:
+The best results were obtained from [`V9`](Training/V9) model and they are as follows:
 
 - On Validation Set:
 
 #### BBOX:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
 |--------|--------|--------|--------|--------|--------|
-| 70.0634| 75.5068| 70.6728| 3.3102 | 64.6166| 96.4978|
+| 83.4389| 88.4349| 83.6270| 5.9443 | 64.5735| 97.7995|
 
 #### SEGM:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
 |--------|--------|--------|--------|--------|--------|
-| 63.8189| 76.1569| 69.7305| 1.8703 | 54.2696| 88.9731|
+| 75.1471| 90.7207| 82.8297| 2.3843 | 50.9996| 88.5360|
 
 
 - On Test Set:
@@ -87,12 +87,12 @@ The best results were obtained from [`V2`](Training/V2) model and they are as fo
 #### BBOX:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
 |--------|--------|--------|--------|--------|--------|
-| 76.4125| 78.2115| 78.2115| 4.8238 | 83.2426| 98.3491|
+| 92.8966| 94.0123| 94.0122| 22.0589| 86.2290| 99.7737|
 
 #### SEGM:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
 |--------|--------|--------|--------|--------|--------|
-| 68.6355| 78.2038| 71.7430| 3.1889 | 45.3803| 92.6251|
+| 81.3239| 92.9898| 84.6516| 7.4258 | 36.5760| 91.9856|
 
 
 where
