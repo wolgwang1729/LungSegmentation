@@ -67,7 +67,7 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 
 ## Metrics
 
-The best results(according to validation dataset) were obtained from [`V9`](Training/V9) model and they are as follows:
+The best results(according to validation dataset) were obtained from [`V09`](Training/V09) model and they are as follows:
 
 - On Validation Set:
 
