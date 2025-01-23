@@ -2,7 +2,7 @@
 
 - **Pre-trained Model**: `COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x`
 - **Model Weights**: `model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")`
-- **Optimizer**: Adam
+- **Optimizer**: AdamW
 
 ### DataLoader
 - **Number of Workers**: 2
