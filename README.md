@@ -67,32 +67,31 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 
 ## Metrics
 
-The best results(according to validation dataset) were obtained from [`V09`](Training/V09) model and they are as follows:
+The best results(according to validation dataset) were obtained from [`V13`](Training/V13) model and they are as follows:
 
 - On Validation Set:
 
 #### BBOX:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
 |--------|--------|--------|--------|--------|--------|
-| 83.4389| 88.4349| 83.6270| 5.9443 | 64.5735| 97.7995|
+| 83.5287| 87.5968| 83.6156| 2.6997 | 69.9006| 97.8596|
 
 #### SEGM:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
 |--------|--------|--------|--------|--------|--------|
-| 75.1471| 90.7207| 82.8297| 2.3843 | 50.9996| 88.5360|
-
+| 76.1599| 90.8345| 81.9858| 2.7424 | 56.7885| 89.7311|
 
 - On Test Set:
 
 #### BBOX:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
 |--------|--------|--------|--------|--------|--------|
-| 92.8966| 94.0123| 94.0122| 22.0589| 86.2290| 99.7737|
+| 93.6290| 94.0256| 94.0241| 20.9390| 89.4532| 100.0000|
 
 #### SEGM:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
 |--------|--------|--------|--------|--------|--------|
-| 81.3239| 92.9898| 84.6516| 7.4258 | 36.5760| 91.9856|
+| 81.9866| 93.0000| 85.9504| 6.3418 | 41.9345| 92.9767|
 
 
 where
