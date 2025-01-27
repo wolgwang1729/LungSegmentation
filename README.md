@@ -58,18 +58,18 @@ Finally, the fine-tuned model is used to run inference on the LIDC-IDRI Image to
 
 1. **For Training**: 
 - Install the requirements from [`RequirementsTraining.txt`](Training/RequirementsTraining.txt).
-- Copy the script [`LungSegmentationTraining2500iters.ipynb`](Training/V1/LungSegmentationTraining2500iters.ipynb) and change the appropriate fields according to your environment like Annotations path, Images path.
+- Copy the script [`LungSegmentation.ipynb`](Training/V13/LungSegmentation.ipynb) and change the appropriate fields according to your environment like Annotations path, Images path.
 
 2. **For Inference**: 
 - Install the requirements from [`RequirementsInference.txt`](Inference/RequirementsInference.txt).
-- Request to access the model along with reason from [Drive Link](https://drive.google.com/file/d/1-9ioLFORD_EA_ZvaG3IHkrMF1vIYkXAz/view?usp=drive_link).
+- Request to access the model from [Drive Link](https://drive.google.com/file/d/1d0bhKc5xJjyFNemzDGF7eyx_pctgqUy4/view?usp=sharing).
 - Copy the script [`LungSegmentationInference.ipynb`](Inference/LungSegmentationInference.ipynb) and move the `model_final.pth` to appropriate place.
 
 ## Metrics
 
 The best results(according to validation dataset) were obtained from [`V13`](Training/V13) model and they are as follows:
 
-- On Validation Set:
+- On **Validation** Set:
 
 #### BBOX:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
@@ -81,7 +81,7 @@ The best results(according to validation dataset) were obtained from [`V13`](Tra
 |--------|--------|--------|--------|--------|--------|
 | 76.1599| 90.8345| 81.9858| 2.7424 | 56.7885| 89.7311|
 
-- On Test Set:
+- On **Test** Set:
 
 #### BBOX:
 | AP     | AP50   | AP75   | APs    | APm    | APl    |
@@ -113,3 +113,4 @@ This project demonstrates the process of preparing a medical imaging dataset for
 - The VESSEL12 Grand Challenge for providing the dataset.
 - Kaggle for hosting the dataset.
 - Detectron2 for the pre-trained model and segmentation framework.
+- Google Colab for providing free GPU resources for training and inference.
